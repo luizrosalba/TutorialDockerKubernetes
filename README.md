@@ -12,6 +12,17 @@ Os slides que eu uso para passar os conceitos principais sobre Docker e Kubernet
 
 ### Docker 
 
+para mover as imagens : 
+
+Stop docker etc
+Type “Hyper-V Manager” in task-bar search box and run it.
+Select your PC in the left hand pane (Mine is called DESKTOP-CBP**)
+Right click on the correct virtual machine (Mine is called MobyLinuxVM)
+Select “Turn off” (If it is running)
+Right click on it again and select “Move”
+Follow the prompts
+
+
 Imagens -> docker run -> running containers
 
 - containers são mb de ordem de grandeza 

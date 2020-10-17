@@ -3,6 +3,10 @@ Comandos para montagem de cluster AKS e registro ACR
 
 Para montar o ambiente, os seguinte comandos devem ser rodados no powershell, com o Azure Cli instalado:
 
+https://docs.microsoft.com/pt-br/cli/azure/install-azure-cli-windows?tabs=azure-cli
+
+Install-Module -Name PowerShellGet -Force
+
 1. Obter o id da subscrion atual: ```$subscription = (az account show | ConvertFrom-Json).id```
 2. Escolha um nome único para o seu ACR: ```$acrName="meuacrunico"```
 3. Escolha um nome para o seu resource group: ```$resouceGroupName="tutorial-kube"```

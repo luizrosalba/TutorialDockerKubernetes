@@ -22,6 +22,7 @@ Os comandos que utilizamos em nosso Dockerfile foram:
 Para fazer o build do container, utilizamos o comando: 
 
 ```Powershell
+cd G:\DIO\TutorialDockerKubernetes\docker\2-Dockerfile-simples
 docker build --tag meu-container:1.0 .
 ```
 
