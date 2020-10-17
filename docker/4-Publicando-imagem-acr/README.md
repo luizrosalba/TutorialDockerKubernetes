@@ -1,6 +1,9 @@
 Publicando uma imagem no ACR
 ============================
 
+dockerhub é um registry container ou seja ele pode receber a imagem de forma publica ou privada 
+as clouds tem o seus acr ( registro de containers )
+
 Após gerar a imagem local, podemos publicar ela no nosso ACR, para que outras pessoas possam utilizá-la, para isso, dever-se rodar o comando:
 
 ```docker tag my-container-app:1.0 meuacrunico.azurecr.io/my-container-app```

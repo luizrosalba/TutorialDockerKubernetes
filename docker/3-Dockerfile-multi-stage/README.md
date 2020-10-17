@@ -1,7 +1,7 @@
 Dockerfile Multi-Stage
 ======================
 
-Para este tutorial, vamos mostrar como usar um Dockerfile com multiplos passos, para rodar um serviço .Net Core.
+Para este tutorial, vamos mostrar como usar um Dockerfile com multiplos passos, para rodar um serviço .Net Core. (disse o prof que cobre quase todos os casos de uso de docker)
 
 O projeto está criado no diretório ```my-container-app``` e os comandos abaixo devem ser rodados neste diretório.
 
@@ -20,6 +20,8 @@ RUN dotnet restore
 # copy everything else and build app
 COPY . ./
 RUN dotnet publish -c Release -o out
+
+# imagem de runtime é muito menor pois só tem as ferramentas de construção e não o sdk completo deixando o container mais seguro
 
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-alpine AS runtime
 WORKDIR /app
@@ -47,6 +49,7 @@ Os comandos que utilizamos em nosso Dockerfile foram:
 Para fazer o build do container, utilizamos o comando:
 
 ```Powershell
+
 docker build --tag my-container-app:1.0 .
 ```
 
@@ -55,3 +58,4 @@ Este comando faz faz o build do diretório corrente e nomeia o container com o n
 Após rodar, podemos usar o comando: ```docker image list``` para listar as imagens presentes no nosso registro local. Para executar a aplicação, rodarmos:```docker run -d -p 3000:80 my-container-app:1.0```
 
 Para acessar, use a URL: http://localhost:3000/weatherforecast
+
