@@ -23,7 +23,7 @@ spec:
 Para aplicar esse arquivo no cluster, deve-se usar o comando apply, passando-se o arquivo e o nome do namespace onde será rodado.
 
 ```Powershell
-kubectl apply -f .\pod-info-service.yaml --namespace=my-namespace
+kubectl apply -f .\pod-info-service-load-balancer.yaml --namespace=my-namespace
 ```
 
 Para listar os serviços, deve-se rodar o comando:

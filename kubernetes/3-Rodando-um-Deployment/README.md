@@ -61,8 +61,8 @@ pod-info-deployment-7945c979c7-gt4q5   1/1     Running   0          21s
 Ambas as Pods estão expondo a porta 9898 para o cluster, porém para acessá-la de fora é necessário criar um port-forward, utilizando-se os comandos em duas janelas separadas:
 
 ```Powershell
-kubectl port-forward pod-info-deployment-7945c979c7-bm8r9 3002:9898 --namespace=my-namespace
-kubectl port-forward pod-info-deployment-7945c979c7-gt4q5 3003:9898 --namespace=my-namespace
+kubectl port-forward pod-info-deployment-7945c979c7-hdv28 3002:9898 --namespace=my-namespace
+kubectl port-forward pod-info-deployment-7945c979c7-rcpf4 3003:9898 --namespace=my-namespace
 ```
 
 Assim, expomos a porta 9898 do container como a porta 3002 do computador local.

@@ -17,7 +17,12 @@ Install-Module -Name PowerShellGet -Force
 8. Criar service principal: ```$servicePrincipal = az ad sp create-for-rbac --sdk-auth --skip-assignment```
 9. Converter o Service principal em objeto para uso nos proximos comandos: ```$sp = $servicePrincipal |ConvertFrom-Json```
 10. Atribuir o papel de Contributor para o Service Principal poder fazer deploy no AKS: ```az role assignment create --assignee $sp.clientId --scope /subscriptions/$subscription/resourcegroups/$resouceGroupName/providers/Microsoft.ContainerService/managedClusters/$aksName --role Contributor```
-11. Atribuir o papel de AcrPush para o Service Principal poder fazer Push do Container no ACR:  ```az role assignment create --assignee $sp.clientId  --scope /subscriptions/$subscription/resourceGroups/$resourceGroupName/providers/Microsoft.ContainerRegistry/registries/$acrName --role AcrPush```
-12. Conectar com o AKS localmente: ```az aks get-credentials -g $resourceGroupName --name $aksName```
+11. Atribuir o papel de AcrPush para o Service Principal poder fazer Push do Container no ACR:  ```az role assignment create --assignee $sp.clientId  --scope /subscriptions/$subscription/resourceGroups/$resouceGroupName/providers/Microsoft.ContainerRegistry/registries/$acrName --role AcrPush```
+12. Conectar com o AKS localmente: ```az aks get-credentials -g $resouceGroupName --name $aksName```
 13. Conectar com o ACR localmente: ```az acr login --name $acrName```
 14. Testar a conexão com o AKS: ```kubectl get namespace```, deverá listar os namespaces
+
+
+aqui tem mais informações sobre como criar o cluster 
+ambiente\1-Criando-um-cluster-AKS\README.md
+

@@ -9,6 +9,7 @@ Vamos mostrar duas formas de criar um namespace, uma usando somente linha de com
 Para criar um namespace usando apenas a linha de comando, o comando é:
 
 ```Powershell
+cd G:\DIO\TutorialDockerKubernetes\docker\3-Dockerfile-multi-stage\my-container-app
 kubectl create namespace my-first-namespace
 ```
 
@@ -33,7 +34,12 @@ metadata:
 Para criar o namespace, deve-se utilizar o seguinte comando:
 
 ```Powershell
+G:\DIO\TutorialDockerKubernetes\kubernetes\1-Criando-um-Namespace
+
 kubectl apply -f .\my-namespace.yaml
 ```
 
-O Comando apply cria ou altera um recurso, de acordo com o arquivo passado. Pode-se utilizar também o comando create, que apenas cria um objeto, não modificando caso ele exista.
+O Comando apply cria ou altera um recurso, de acordo com o arquivo passado. 
+Pode-se utilizar também o comando create, que apenas cria um objeto, não modificando caso ele exista.
+
+

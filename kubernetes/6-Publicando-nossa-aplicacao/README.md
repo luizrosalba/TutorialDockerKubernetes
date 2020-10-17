@@ -84,6 +84,8 @@ kubectl get service --namespace=my-namespace
 kubectl get deployment --namespace=my-namespace
 kubectl get hpa --namespace=my-namespace
 ```
+kubectl delete deployment pod-info-deployment -n my-namespace       
+
 
 Com isso terminamos nosso tutorial básico sobre Kubernetes!
 

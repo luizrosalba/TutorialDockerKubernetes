@@ -37,3 +37,5 @@ Para listar o recurso criado, deve-se rodar o comando:
 ```Powershell
 kubectl get hpa --namespace=my-namespace
 ```
+
+/// ideal 3 pods para ter resiliencia 

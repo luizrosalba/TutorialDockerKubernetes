@@ -26,3 +26,14 @@ Para enviar a imagem para o servidor, temos que rodar:
 ```docker push meuacrunico.azurecr.io/my-container-app```
 
 Pronto! a imagem está no servidor e pode ser utilizada por quem tem acesso a ela!
+
+
+Orquestração de containers 
+
+- kubernets padrão de orquestradores de containers 
+- aks é a plataforma de kubernets gerenciada da microsoft azure é responsável pela gestao , escala 
+e operação dos nos de controle e os usuários escalam os nós de trabalho e deployam os workloads 
+- agendamento , afinidade, monitoramento , resiliência , escala ,
+rede, service discovery , atualização de coordenadas .
+
+

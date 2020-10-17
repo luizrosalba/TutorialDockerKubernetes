@@ -44,7 +44,7 @@ kubectl get pod --namespace=my-namespace
 A Pod está expondo a porta 80 para o cluster, porém para acessá-la de fora é necessário criar um port-forward, utilizando-se o comando:
 
 ```Powershell
-kubectl port-forward getting-started 3001:80 --namespace=my-namespace
+kubectl port-forward getting-started 3002:80 --namespace=my-namespace
 ```
 
 Assim, expomos a porta 80 do container como a porta 3001 do computador local.
